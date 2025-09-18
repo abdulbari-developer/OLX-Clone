@@ -3,6 +3,7 @@ import car from '../../assets/img/im.jpg'
 import Categories from './Categories'
 import product from '../product_list'
 import ProductModal from './ProductModal'
+import BoxexCategory from './BoxexCategory'
 const Products = () => {
     
 
@@ -14,6 +15,8 @@ const Products = () => {
     const closeModal = ()=>setselectedProduct(null)
     return (
         <>
+<BoxexCategory/>
+             
             <div className='products'>
                 <h2 className='products-h2'>Mobiles</h2>
                 <div className="product-container">

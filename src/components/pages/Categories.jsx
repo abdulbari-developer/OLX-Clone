@@ -58,78 +58,7 @@ const Categories = () => {
         },
     ]
 
-    let boxex=[
-        {
-             index :1,
-             title: 'Mobiles',
-             img : mobile, 
-        },
-        {
-             index :2,
-             title: 'Vehicles',
-             img : vihicle, 
-        },
-        {
-             index :3,
-             title: 'Properties For Sale',
-             img : sale, 
-        },
-        {
-             index :4,
-             title: 'Properties For Rent',
-             img : rent, 
-        },
-        {
-             index :5,
-             title: 'Electronics & Home...',
-             img : electronic, 
-        },
-        {
-             index :6,
-             title: 'Bikes',
-             img : bike, 
-        },
-        {
-             index :7,
-             title: 'Business & Industrial....',
-             img : industry, 
-        },
-        {
-             index :8,
-             title: 'Services',
-             img : services, 
-        },
-        {
-             index :9,
-             title: 'Jobs',
-             img : job, 
-        },
-        {
-             index :10,
-             title: 'Animal',
-             img : animal, 
-        },
-        {
-             index :11,
-             title: 'Furniture & Home Decor',
-             img : furniture, 
-        },
-        {
-             index :12,
-             title: 'Fashion & Beauty',
-             img : fashion, 
-        },
-        {
-             index :13,
-             title: 'Books, Sports & Hobbies',
-             img : books, 
-        },
-        {
-             index :14,
-             title: 'Kids',
-             img : kid, 
-        },
-    ]
+    
     const [products, setproducts] = useState(product)
      const [selectCategary, setselectCategary] = useState('')
 
@@ -145,6 +74,7 @@ const Categories = () => {
             setselectCategary(category)
             navigate(`/Categories/${category}`)
         }
+        
         
   return (
     <>
@@ -162,18 +92,6 @@ const Categories = () => {
                 <p key={index} className='cat-1-p' onClick={()=>handleCategorySelect(item.category)}>{item.title}</p>
             ))
         }
-        </div>
-        <div className="poster">
-            <img src={poster} alt="" className='poster-img' />
-        </div>
-        <div className="boxex"  >
-            {
-            boxex.map((item,index)=>(
-            <div className="box" key={item.index} onClick={()=>handleCategorySelect(item.title)}>
-                <img src={item.img} alt="" />
-                <p className='cat-2-p'>{item.title}</p>
-            </div>
-))}
         </div>
       </div>
     </>

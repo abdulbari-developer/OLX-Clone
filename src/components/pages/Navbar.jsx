@@ -8,7 +8,9 @@ import location from '../../assets/svg/iconLocation.svg'
 import notification from '../../assets/svg/iconNotifications.svg'
 import profile from '../../assets/svg/iconProfile.svg'
 import product from '../product_list'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
+
 const Navbar = () => {
     const [products, setproducts] = useState(product)
      const [selectCategary, setselectCategary] = useState('')
@@ -69,7 +71,7 @@ const Navbar = () => {
     <div className='nav'>
       <div className="upper-div">
       <div className="options">
-        <div className="logo"><img src={logo} alt=""  className='nav-img'/></div>
+        <div className="logo"><Link to='/'><img src={logo} alt=""  className='nav-img'/></Link></div>
       
         <div className="opt motors" onClick={()=> handleClick(category[0].category)} value={selectCategary}>
         <img src={motor} alt=""  className='nav-img'/>
@@ -82,11 +84,11 @@ const Navbar = () => {
       </div>
       <div className="right-upper-div">
         <div className="icons">
-          <img src={chat} alt="" className='icon'/>
+         <Link to='/Chat'> <img src={chat} alt="" className='icon'/></Link>
           <img src={notification} alt="" className='icon' />
           <img src={profile} alt="" className='icon pro'/>
           <img src={cart} alt="" className='icon'/>
-        <button className='btn-sell'> &#43; Sell</button>
+        <Link className='btn-sell' to='/SellForm'> &#43; Sell</Link>
         </div>
       </div>
       </div>

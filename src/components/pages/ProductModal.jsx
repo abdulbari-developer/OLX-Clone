@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Categories from './Categories'
+import { Link } from 'react-router-dom'
+import Chat from './Chat'
+Chat
 const ProductModal = ({product,onClose}) => {
   return (
-    <>
+    <div className='modal'>
+
      <div className="modal-container">
 
       <div className="modal-left">
@@ -15,11 +19,10 @@ const ProductModal = ({product,onClose}) => {
         <p className="modal-desc">{product.description}</p>
         <p className="modal-location">{product.location}</p>
         <p className="modal-time">{product.date}</p>
-        <button className='modal-btn chat'>Chat</button>
-        <button className='modal-btn buy'>Buy</button>
+        <Link className='modal-btn chat-btn' to='/Chat'>Chat</Link>
       </div>
      </div> 
-    </>
+    </div>
   )
 }
 

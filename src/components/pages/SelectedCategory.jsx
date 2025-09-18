@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import product from '../product_list'
 import car from '../../assets/img/im.jpg'
 import ProductModal from './ProductModal'
-
+import Categories from './Categories'
 
 
 const SelectedCategory = () => {
@@ -15,6 +15,8 @@ const SelectedCategory = () => {
     
         const closeModal = ()=>setselectedProduct(null)
   return (
+    <>
+
        <div className='products'>
       <h2 className='products-h2'>{categoryName}</h2>
       <div className="product-container">
@@ -33,6 +35,7 @@ const SelectedCategory = () => {
             <ProductModal product={selectedProduct} onClose={closeModal}/>
             )}
     </div>
+    </>
 )
 };
 

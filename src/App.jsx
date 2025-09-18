@@ -7,6 +7,8 @@ import Navbar from './components/pages/Navbar'
 import Categories from './components/pages/Categories'
 import Products from './components/pages/Products'
 import SelectedCategory from './components/pages/SelectedCategory'
+import SellForm from './components/pages/SellForm'
+import Chat from './components/pages/Chat'
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,6 +18,8 @@ const App = () => {
    <Routes>
     <Route path='/' element={<Products/>}/>
     <Route path='/Categories/:categoryName' element={<SelectedCategory/>}/>
+    <Route path='/SellForm' element={<SellForm/>}/>
+    <Route path='/Chat' element={<Chat/>}/>
    </Routes>
    </div>
    </BrowserRouter>
