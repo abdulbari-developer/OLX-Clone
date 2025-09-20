@@ -3,6 +3,8 @@ import icon from '../../assets/svg/iconProfile.svg'
 import call from '../../assets/svg/iconCall.svg'
 import sms from '../../assets/svg/iconSMS.svg'
 import dots from '../../assets/svg/iconDots.svg'
+
+
 const Chat = () => {
   return (
     <>
@@ -55,6 +57,7 @@ const Chat = () => {
              <i className="fa-solid fa-paper-plane"></i>
             </div>
         </div>
+    
       </div>
     </>
   )

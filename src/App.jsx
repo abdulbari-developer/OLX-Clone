@@ -1,6 +1,6 @@
 import React from 'react'
-import SignIn from './components/auth/SignIn'
-import SignUp from './components/auth/SignUp'
+import SignIn from './components/auth/SignUp'
+import SignUp from './components/auth/SignIn'
 import OTP from './components/auth/OTP'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Navbar from './components/pages/Navbar'

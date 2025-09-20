@@ -4,6 +4,8 @@ import Categories from './Categories'
 import product from '../product_list'
 import ProductModal from './ProductModal'
 import BoxexCategory from './BoxexCategory'
+import SignUp from '../auth/SignUp'
+
 const Products = () => {
     
 
@@ -98,7 +100,7 @@ const Products = () => {
                             <p className="location">{item.location}</p>
                             <p className="time">{item.date}</p>
                         </div>))} </div>
-               
+               <SignUp/>
             </div>
             {selectedProduct&&(
             <ProductModal product={selectedProduct} onClose={closeModal}/>
